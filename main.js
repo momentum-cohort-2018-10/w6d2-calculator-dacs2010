@@ -28,27 +28,31 @@ function clear(event) {
         getId("display").innerText = ""
     }
 }
+
+let buttonIds = [
+    "button-1",
+    "button-2",
+    "button-3",
+    "button-div",
+    "button-4",
+    "button-5",
+    "button-6",
+    "button-mult",
+    "button-7",
+    "button-8",
+    "button-9",
+    "button-sub",
+    "button-0",
+    "button-point",
+    "button-plus"
+]
+
+function activateButtons(buttonIds) {
+    for (let id of buttonIds) {
+         button(id)
+    }
+}
+
+activateButtons(buttonIds)
 clear()
-
-button("button-1")
-button("button-2")
-button("button-3")
-button("button-div")
-
-button("button-4")
-button("button-5")
-button("button-6")
-button("button-mult")
-
-button("button-7")
-button("button-8")
-button("button-9")
-button("button-sub")
-
-button("button-0")
-button("button-point")
-button("button-plus")
-
 equals()
-
-console.log("js connected")
