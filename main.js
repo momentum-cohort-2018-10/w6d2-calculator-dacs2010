@@ -4,6 +4,15 @@ function getId(id) {
 }
 getId()
 
+function button(id) {
+    let button = getId(id)
+    let text = button.innerText
+    let action = button.onclick = function () {
+        getId("display").innerText += text
+    }
+    return action
+}
+
 function equals(event) {
     let button = getId("equals")
     button.onclick = function () {
@@ -17,47 +26,29 @@ function clear(event) {
     let button = getId("clear")
     button.onclick = function () {
         getId("display").innerText = ""
-        // location.reload()
     }
 }
-
-function button1(event){
-    let button = getId("button-1")
-    let text = button.innerText
-    button.onclick = function () {
-        getId("display").innerText += text
-    }
-}
-function button2(event) {
-    let button = getId("button-2")
-    let text = button.innerText
-    button.onclick = function () {
-        getId("display").innerText += text
-    }
-}
-
-function button3(event) {
-    let button = getId("button-3")
-    let text = button.innerText
-    button.onclick = function () {
-        getId("display").innerText += text
-    }
-}
-
-function buttonDiv(event) {
-    let button = getId("button-div")
-    let text = button.innerText
-    button.onclick = function () {
-        getId("display").innerText += text
-    }
-}
-
-
-button1()
-button2()
-button3()
-buttonDiv()
 clear()
+
+button("button-1")
+button("button-2")
+button("button-3")
+button("button-div")
+
+button("button-4")
+button("button-5")
+button("button-6")
+button("button-mult")
+
+button("button-7")
+button("button-8")
+button("button-9")
+button("button-sub")
+
+button("button-0")
+button("button-point")
+button("button-plus")
+
 equals()
 
 console.log("js connected")
